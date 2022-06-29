@@ -101,7 +101,7 @@ async def cls(_, query: CallbackQuery):
                    & ~filters.via_bot)
 async def play(_, message: Message):
 
-    lel = await message.reply("🔄 **Sorğu emal olunur... Zəhmət olmasa gözləyin !**")
+    lel = await message.reply("🔄 **Mahnı axtarılır... Zəhmət olmasa gözləyin !**")
     
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
@@ -109,7 +109,7 @@ async def play(_, message: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "yalvargelim"
+        user.first_name = "GG_Sahib"
     usar = user
     wew = usar.id
     try:
@@ -127,18 +127,18 @@ async def play(_, message: Message):
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message.chat.id, "**Assistant Account[𝙍𝘼𝙃𝙄𝘿 𝙈𝙐𝙎𝙄𝘾 🎸](https://t.me/Rahid_MP3) Uğurla Qoşuldu.\n\nİndi musiqi oxumağa başlayır**")
+                        message.chat.id, "**Assistant Account[𝙱𝚃𝙾 • 𝙰𝚜𝚒𝚜𝚝𝚊𝚗](https://t.me/BTO_Music_Asistan) Uğurla Qoşuldu.\n\nİndi musiqi oxumağa başlayır**")
 
                 except UserAlreadyParticipant:
                     pass
                 except Exception:
                     await lel.edit(
-                        f"Assistantın banını açın\nİstifadəçi adı: @Rahid_MP3\nKöməkçi ID: `5365018013`")
+                        f"Assistantın banını açın\nİstifadəçi adı: @BTO_Music_Asistan\nKöməkçi ID: `1931964375`")
     try:
         await USER.get_chat(chid)
     except:
         await lel.edit(
-            f"Assistantın banını açın\nİstifadəçi adı: @Rahid_MP3\nKöməkçi ID: `5365018013`")
+            f"Assistantın banını açın\nİstifadəçi adı: @BTO_Music_Asistan\nKöməkçi ID: `1931964375`")
         return
     
     audio = (message.reply_to_message.audio or message.reply_to_message.voice) if message.reply_to_message else None
@@ -198,8 +198,8 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
                       [
             [
-                InlineKeyboardButton("📢 Rəsmi kanal", url=f"https://t.me/Rahid_44"),
-                InlineKeyboardButton("🆘 Support", url=f"https://t.me/Rahid_Support"),
+                InlineKeyboardButton("💫 Kanal", url=f"https://t.me/qelbenn"),
+                InlineKeyboardButton("💬 Söhbət Qrupu", url=f"https://t.me/GG_teams"),
             ],[
                 InlineKeyboardButton("🗑️ Menyunu Bağla", callback_data="cls"),
             ],
@@ -228,11 +228,11 @@ async def play(_, message: Message):
         file_path = await converter.convert(youtube.download(url))
     else:
         if len(message.command) < 2:
-            return await lel.edit("**Hansı mahnı dinləmək istəyirsinizsə /play Mahnı adı yazın**")
+            return await lel.edit("**Hansı mahnı dinləmək istəyirsinizsə /play mahnı adı yazın**")
         await lel.edit("🔎 **Xahiş olunur gözləyin...**")
         query = message.text.split(None, 1)[1]
         # print(query)
-        await lel.edit("**Səsli söhbətə daxil oluram...✅**")
+        await lel.edit("**Səsli söhbətə daxil olunur...✅**")
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
             url = f"https://youtube.com{results[0]['url_suffix']}"
@@ -263,8 +263,8 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
                       [
             [
-                InlineKeyboardButton("📢 Rəsmi Kanal", url=f"https://t.me/Rahid_44"),
-                InlineKeyboardButton("🆘 Support", url=f"https://t.me/Rahid_Support"),
+                InlineKeyboardButton("💫 Kanal", url=f"https://t.me/qelbenn"),
+                InlineKeyboardButton("💬 Söhbət Qrupu", url=f"https://t.me/GG_teams"),
             ],[
                 InlineKeyboardButton("🗑️ Menyunu Bağla", callback_data="cls"),
             ],
