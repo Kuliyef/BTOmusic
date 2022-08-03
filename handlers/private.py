@@ -115,7 +115,7 @@ async def cbstart(_, query: CallbackQuery):
             [
                 [
                     InlineKeyboardButton(
-                        "Qrupa əlavə et ➕", url=f"https://t.me/BTO_Music_Bot?startgroup=true"
+                        "Qrupa əlavə et ➕", url=f"https://t.me/AlcatrazMuzikBot?startgroup=true"
                     )
                 ],
                 [
