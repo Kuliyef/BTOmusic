@@ -127,18 +127,18 @@ async def play(_, message: Message):
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message.chat.id, "**Assistant Account[𝙱𝚃𝙾 • 𝙰𝚜𝚒𝚜𝚝𝚊𝚗](https://t.me/BTO_Music_Asistan) Uğurla Qoşuldu.\n\nİndi musiqi oxumağa başlayır**")
+                        message.chat.id, "**Assistant Account[Alcatraz Music Asistant](https://t.me/AlcatrazMusicAsistant1) Uğurla Qoşuldu.\n\nİndi musiqi oxumağa başlayır**")
 
                 except UserAlreadyParticipant:
                     pass
                 except Exception:
                     await lel.edit(
-                        f"Assistantın banını açın\nİstifadəçi adı: @BTO_Music_Asistan\nKöməkçi ID: `1931964375`")
+                        f"Assistantın banını açın\nİstifadəçi adı: @AlcatrazMusicAsistant1\nKöməkçi ID: `5422968390`")
     try:
         await USER.get_chat(chid)
     except:
         await lel.edit(
-            f"Assistantın banını açın\nİstifadəçi adı: @BTO_Music_Asistan\nKöməkçi ID: `1931964375`")
+            f"Assistantın banını açın\nİstifadəçi adı: @AlcatrazMusicAsistant\nKöməkçi ID: `5422968390`")
         return
     
     audio = (message.reply_to_message.audio or message.reply_to_message.voice) if message.reply_to_message else None
@@ -147,7 +147,7 @@ async def play(_, message: Message):
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
             raise DurationLimitError(
-                f"Bu mahnının vaxtı çox uzundur😶 {DURATION_LIMIT} dəqiqəlik icazə verilir!"
+                f"Bu mahnının vaxtı çox uzundur {DURATION_LIMIT} dəqiqəlik icazə verilir!"
             )
 
         file_name = get_file_name(audio)
@@ -198,8 +198,8 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
                       [
             [
-                InlineKeyboardButton("💫 Kanal", url=f"https://t.me/qelbenn"),
-                InlineKeyboardButton("💬 Söhbət Qrupu", url=f"https://t.me/GG_teams"),
+                InlineKeyboardButton("✅ Kanal", url=f"https://t.me/AlzResmi"),
+                InlineKeyboardButton("💬 Support Qrupu", url=f"https://t.me/AlzSupport"),
             ],[
                 InlineKeyboardButton("🗑️ Menyunu Bağla", callback_data="cls"),
             ],
@@ -221,7 +221,7 @@ async def play(_, message: Message):
                     ]
                 )
         if (dur / 60) > DURATION_LIMIT:
-             await lel.edit(f"Bu Mahnının vaxtı çox uzundur😶 {DURATION_LIMIT} dəqiqəlik icazə verilir!")
+             await lel.edit(f"Bu Mahnının vaxtı çox uzundur {DURATION_LIMIT} dəqiqəlik icazə verilir!")
              return
         requested_by = message.from_user.first_name
         await generate_cover(requested_by, title, views, duration, thumbnail)     
@@ -255,7 +255,7 @@ async def play(_, message: Message):
                 
         except Exception as e:
             await lel.edit(
-                "Mahnı tapılmadı🙁\n\nBaşqa mahnı yoxlayın və ya mahnı adı düzgün deyil😐"
+                "Mahnı tapılmadı🙁\n\nBaşqa mahnı yoxlayın və ya mahnı adı düzgün deyil"
             )
             print(str(e))
             return
@@ -263,8 +263,8 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
                       [
             [
-                InlineKeyboardButton("💫 Kanal", url=f"https://t.me/qelbenn"),
-                InlineKeyboardButton("💬 Söhbət Qrupu", url=f"https://t.me/GG_teams"),
+                InlineKeyboardButton("✅ Kanal", url=f"https://t.me/AlzResmi"),
+                InlineKeyboardButton("💬 Suoport Qrupu", url=f"https://t.me/AlzSupport"),
             ],[
                 InlineKeyboardButton("🗑️ Menyunu Bağla", callback_data="cls"),
             ],
@@ -272,7 +272,7 @@ async def play(_, message: Message):
     )
         
         if (dur / 60) > DURATION_LIMIT:
-             await lel.edit(f"Bu mahnının vaxtı çox uzundur😶 {DURATION_LIMIT} dəqiqəlik icazə verilir!")
+             await lel.edit(f"Bu mahnının vaxtı çox uzundur {DURATION_LIMIT} dəqiqəlik icazə verilir!")
              return
         requested_by = message.from_user.first_name
         await generate_cover(requested_by, title, views, duration, thumbnail)  
