@@ -1,8 +1,8 @@
 {
-  "name": "Rahid Music 🎸",
-  "description": "Telegram qrup səs çatında mahnıları səsləndirmək üçün açıq mənbə botu. Powered by Rahid.",
+  "name": "Alcatraz Music 🎸",
+  "description": "Telegram qrup səs çatında mahnıları səsləndirmək üçün açıq mənbə botu. Powered by OldDictator.",
   "keywords": ["music", "voicechat", "telegram"],
-  "repository": "https://github.com/Rahid2003/RahidMP3",
+  "repository": "https://github.com/Kuliyef/BTOmusic",
   "stack": "container",
   "env": {
     "SESSION_NAME": {
@@ -39,7 +39,7 @@
     "BOT_OWNER": {
       "description": "Öz ID'nizi yazın",
       "required": true,
-      "value": "yalvargelim"
+      "value": "OldDictator"
     },
     "DURATION_LIMIT": {
       "description": "Yükləmələr üçün maksimum audio vaxt limiti (dəqiqə).",
