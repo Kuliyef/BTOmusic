@@ -16,7 +16,7 @@ async def start_(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "Qrupa əlavə et ➕", url=f"https://t.me/BTO_Music_Bot?startgroup=true"
+                        "Qrupa əlavə et ➕", url=f"https://t.me/AlcatrazMuzikBot?startgroup=true"
                     )
                 ],
                 [
