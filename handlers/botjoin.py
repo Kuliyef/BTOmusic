@@ -20,25 +20,25 @@ async def addchannel(client, message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name =  "Sesmusic Asistan"
+        user.first_name =  "Alcatraz Music Asistant"
 
     try:
         await USER.join_chat(invitelink)
-        await USER.send_message(message.chat.id,"Senin İsteğin Üzerine Geldim")
+        await USER.send_message(message.chat.id,"Sənin istəyin üzərinə gəldim")
     except UserAlreadyParticipant:
         await message.reply_text(
-            "<b>Asistan onsuzda qrupda var🙄</b>",
+            "<b>Asistant onsuzda qrupda var</b>",
         )
         pass
     except Exception as e:
         print(e)
         await message.reply_text(
-            f"<b>🔵 Zaman Aşımı Hatası 🔵\n User {user.first_name} userbot için yoğun katılma istekleri nedeniyle grubunuza katılamadı! Asistanın grupta yasaklanmadığından emin olun."
+            f"<b>🔵 Xəta 🔵\n User {user.first_name} userbot üçü çoxlu qatılm istəkləri səbəbi ilə qrubunuza qoşula bilmədi! Asistanın qrupda ban olmadığından əmin olun."
             "\n\n Yada Asistan Hesabını Qrupa özün əlavə et </b>",
         )
         return
     await message.reply_text(
-            "<b>Asistan onsuzda qrupda var🙄</b>",
+            "<b>Asistan onsuzda qrupda var</b>",
         )
     
 @USER.on_message(filters.group & filters.command(["ayril", "asistanby"]))
@@ -47,7 +47,7 @@ async def rem(USER, message):
         await USER.leave_chat(message.chat.id)
     except:  
         await message.reply_text(
-            f"<b>İstifadəçi qrupunuzdan ayrılamadı!."
+            f"<b>İstifadəçi qrupunuzdan ayrılmadı!."
             "\n\nYada özün çıxara bilərsən</b>",
         )
         return
